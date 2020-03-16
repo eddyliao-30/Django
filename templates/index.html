@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset = 'utf-8'>
+	<title>
+		Welcomre to my blog
+	</title>
+</head>
+<body>
+	<h1>Welcome to my blog</h1>
+	<hr>
+	{% for post in posts %}
+		<p style="frony-family:Times New Roman;front-size:16pt;front-weight:bold;">
+			{{ post.title }}
+		</p>
+		<p style="frony-family:Times New Roman;front-size:10pt;letter-spacing:1pt;">
+			{{ post.body }}
+		</p>
+		<p style="frony-family:Times New Roman;front-size:16pt;front-weight:bold;">
+			reversed time = {{ post.pub_date }}
+		</p>
+	{% endfor %}
+	<hr>
+	<h3>current time:{{now}}<h3>
+</body>
+</html>
